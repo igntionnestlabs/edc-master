@@ -1,0 +1,69 @@
+[
+    {
+    "id": 1,
+    "name":"Mr. Jay Sudani",
+    "position":"Chief Executive Officer",
+    "image":"/assets/teams/jaysir.jpg"
+},
+{
+    "id":2,
+    "name":"Mr. Nikhil Suthar",
+    "position":"Chief Operating Officer",
+    "image":"/assets/teams/nikhilsutharsir.jpeg"
+},
+{
+    "id":3,
+    "name":"Mr. Ajay Barot",
+    "position":"Manager-Incubation and Operations",
+    "image":"/assets/teams/ajaysir.jpg"
+},
+{
+    "id":4,
+    "name":"Mr. Hutesh Bhaviskar",
+    "position":"Manager-Incubation",
+    "image":"/assets/teams/huteshSir.jpg"
+},
+{
+    "id":5,
+    "name":"Mrs. Sonal Sudani ",
+    "position":"Manager-Incubation",
+    "image":"/assets/teams/Siya-Ma-am.jpg"
+
+},
+{
+    "id":6,
+    "name":"Mr. Nikhil Jumde",
+    "position":"Manager-Incubation",
+    "image":"/assets/teams/nikhilsir.jpg"
+},
+{
+    "id":7,
+    "name":"Ms. Riddhi Bagha",
+    "position":"Manager-Incubation Programs",
+    "image":"/assets/teams/riddhimam.jpg"
+},
+{
+    "id":8,
+    "name":"Apoorva Bhayani",
+    "position":"Manager- Incubation",
+    "image":"/assets/teams/apporvasir.jpg"
+},
+{
+    "id":9,
+    "name":"Vishal Singh",
+    "position":"Facility Manager",
+    "image":"/assets/teams/vishal.jpg"
+},
+{
+    "id":10,
+    "name":"Shlok Solanki",
+    "position":"Lab Engineer - Fablab",
+    "image":"/assets/teams/shlok.jpg"
+},
+{
+    "id":11,
+    "name":"Himanshu Das",
+    "position":"Lab Associate - Fablab",
+    "image":"/assets/teams/himanshu.jpg"
+}
+]

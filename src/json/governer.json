@@ -1,0 +1,56 @@
+[
+    {
+      "id": 1,
+      "name": "Dr. Devanshu J Patel",
+      "position": "President",
+      "description": "Dr. Devanshu Patel, a dynamic visionary President of Parul University, whose unflinching commitment towards education has made an impact not only in Gujarat but in all the diversified States of India, and going beyond national borders.",
+      "image": "/assets/governers/devanshusir.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Dr. Parul Patel",
+        "position": "Vice President",
+        "description": "Dr. Parul Patel is a resilient administrator, Managing trustee and Vice President of Parul University whose tenderheartedness has allowed her to maintain close relations with the students while guiding them through their academic journey.",
+        "image": "/assets/governers/parulmaam.jpg"
+      },
+      {
+        "id": 3,
+        "name": "Dr. Geetika Patel",
+        "position": "Medical Director, Trustee",
+        "description": "Dr Geetika Madan Patel is a proficient doctor and administrator having pursued her MBBS and MD in Community Medicine with Gold Medal from the illustrious Maharaja Sayajirao University of Baroda. Currently she is the Member of Board of Governance and Medical Director of Parul University.",
+        "image": "/assets/governers/gitikamaam.jpg"
+      },
+
+      {
+        "id": 4,
+        "name": "Dr. Komal Patel",
+        "position": "Medical Director, Trustee",
+        "description": "Dr.Komal Patel serves as Member of the Governing Body in the University’s Medical Director. She oversees smooth functioning of the University’s Ayurveda Hospita along with the Department of Obstetrics and Gynaecology in Parul Sevashram Hospital. She is actively involved developing surgical departments within the Hospital.",
+        "image": "/assets/governers/komalmaam.jpg"
+      },
+      {
+        "id": 5,
+        "name": "Dr. Amit Ganatra",
+        "position": "Provost",
+        "description": "I am truly honoured to be a part of PU and I believe that we will be able to go a long in achieving greater heights for the University across all spheres and as long as we work together, we will surely develop the future careers of our students and the many youths across the nation”, shared Dr. Ganatra.",
+        "image": "/assets/governers/amitsir.jpg"
+      },
+      {
+        "id": 6,
+        "name": "Dr. M N Patel",
+        "position": "Advisor",
+        "description": "Dr. M N Patel is a passion-driven educationalist and visionary who has made a significant mark in the scope of higher education within the State of Gujarat and the nation of India and currently stands as the Former Provost of Parul University.",
+        "image": "/assets/governers/mnsir.jpg"
+      },
+      {
+        "id": 7,
+        "name": "Dr. H.S. Vijayakumar",
+        "position": "Pro-Vice Chancellor",
+        "description": "Dr. H.S. Vijayakumar has 37 years of glittering professional experience during which he has held key positions in teaching and administration at University of Agricultural Sciences, Dharwad. Under his able leadership as Vice Chancellor, University of Agricultural Sciences, Dharwad had scaled new heights.",
+        "image": "/assets/governers/hssir.jpg"
+      }
+      
+  
+
+  ]
+  
