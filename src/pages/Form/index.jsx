@@ -12,8 +12,8 @@ const URL =
 function index() {
   const [btnText, setBtnText] = useState("Submit");
   const [btnDisabled, setBtnDisabled] = useState(false);
-  const [Flag1, setFlag1] = useState(true);
-  const [Flag2, setFlag2] = useState(true);
+  const [Flag1, setFlag1] = useState(false);
+  const [Flag2, setFlag2] = useState(false);
   const [contact, setContact] = useState("");
 
   const handleContactChange = (e) => {
@@ -65,38 +65,42 @@ function index() {
         className="bg-white text-black max-w-3xl flex flex-col items-start justify-center p-4 mx-auto space-y-4"
       >
         {/* Question 1 */}
-        <div className="flex flex-col">
+        <div
+          className={`flex flex-col h-96  w-max-2xl w-full items-center justify-center ${
+            Flag1 ? "hidden" : "block"
+          }`}
+        >
           <label className="font-semibold text-lg">
             What type of support do you need?
           </label>
-          <div className="flex space-x-6 mt-1">
-            <label>
+          <div className="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-6 mt-5">
+            <label className="md:text-lg uppercase text-white bg-red-600 text-base px-6 md:px-8 py-1 md:py-2 rounded-md hover:shadow-lg shadow-md shadow-red-400 hover:shadow-red-400 border-red-600  border-[1px]  duration-500 cursor-pointer">
               <input
                 onChange={() => setFlag1(true)}
                 name="Type_Of_Support"
                 type="radio"
                 value="incubation"
-                className="mr-2"
+                className="mr-2 hidden "
               />
               Incubation
             </label>
-            <label>
+            <label className="md:text-lg uppercase text-white bg-red-600 text-base px-6 md:px-8 py-1 md:py-2 rounded-md hover:shadow-lg shadow-md shadow-red-400 hover:shadow-red-400 border-red-600  border-[1px]  duration-500 cursor-pointer">
               <input
                 onChange={() => setFlag1(true)}
                 name="Type_Of_Support"
                 type="radio"
                 value="growth_pad"
-                className="mr-2"
+                className="mr-2 hidden"
               />
               Growth Pad
             </label>
-            <label>
+            <label className="md:text-lg uppercase text-white bg-red-600 text-base px-6 md:px-8 py-1 md:py-2 rounded-md hover:shadow-lg shadow-md shadow-red-400 hover:shadow-red-400 border-red-600  border-[1px]  duration-500 cursor-pointer">
               <input
                 onChange={() => setFlag1(true)}
                 name="Type_Of_Support"
                 type="radio"
                 value="need_based_support"
-                className="mr-2"
+                className="mr-2 hidden"
               />
               Need Based Support
             </label>
@@ -104,58 +108,62 @@ function index() {
         </div>
 
         {/* Question 2 */}
-        <div className={`flex flex-col ${Flag1 ? "block" : "hidden"}`}>
+        <div
+          className={`flex flex-col h-96  w-max-2xl w-full items-center justify-center ${
+            Flag1 ? (Flag2 ? "hidden" : "block") : "hidden"
+          }`}
+        >
           <label className="font-semibold text-lg">
             Where do you want to Apply?
           </label>
           <div className="flex flex-col space-y-1 ml-4 mt-1">
-            <label>
+            <label className="md:text-lg uppercase text-white bg-red-600 text-base px-6 md:px-8 py-1 md:py-2 rounded-md hover:shadow-lg shadow-md shadow-red-400 hover:shadow-red-400 border-red-600  border-[1px]  duration-500 cursor-pointer">
               <input
                 onChange={() => setFlag2(true)}
                 name="Apply_at"
                 type="radio"
                 value="edc_parul_university"
-                className="mr-2"
+                className="mr-2 hidden"
               />
               EDC Parul University
             </label>
-            <label>
+            <label className="md:text-lg uppercase text-white bg-red-600 text-base px-6 md:px-8 py-1 md:py-2 rounded-md hover:shadow-lg shadow-md shadow-red-400 hover:shadow-red-400 border-red-600  border-[1px]  duration-500 cursor-pointer">
               <input
                 onChange={() => setFlag2(true)}
                 name="Apply_at"
                 type="radio"
                 value="vadodara_startup_studio"
-                className="mr-2"
+                className="mr-2  hidden"
               />
               Vadodara Startup Studio
             </label>
-            <label>
+            <label className="md:text-lg uppercase text-white bg-red-600 text-base px-6 md:px-8 py-1 md:py-2 rounded-md hover:shadow-lg shadow-md shadow-red-400 hover:shadow-red-400 border-red-600  border-[1px]  duration-500 cursor-pointer">
               <input
                 onChange={() => setFlag2(true)}
                 name="Apply_at"
                 type="radio"
                 value="surat_startup_studio"
-                className="mr-2"
+                className="mr-2 hidden"
               />
               Surat Startup Studio
             </label>
-            <label>
+            <label className="md:text-lg uppercase text-white bg-red-600 text-base px-6 md:px-8 py-1 md:py-2 rounded-md hover:shadow-lg shadow-md shadow-red-400 hover:shadow-red-400 border-red-600  border-[1px]  duration-500 cursor-pointer">
               <input
                 onChange={() => setFlag2(true)}
                 name="Apply_at"
                 type="radio"
                 value="rajkot_startup_studio"
-                className="mr-2"
+                className="mr-2 hidden"
               />
               Rajkot Startup Studio
             </label>
-            <label>
+            <label className="md:text-lg uppercase text-white bg-red-600 text-base px-6 md:px-8 py-1 md:py-2 rounded-md hover:shadow-lg shadow-md shadow-red-400 hover:shadow-red-400 border-red-600  border-[1px]  duration-500 cursor-pointer">
               <input
                 onChange={() => setFlag2(true)}
                 name="Apply_at"
                 type="radio"
                 value="ahemdabad_startup_studio"
-                className="mr-2"
+                className="mr-2 hidden"
               />
               Ahmedabad Startup Studio
             </label>
