@@ -5,9 +5,10 @@ import React, { useState } from "react";
 
 const delay = (ms) => new Promise((res) => setTimeout(res, ms));
 
-// const URL = process.env.API_URL;
-const URL =
-  "https://script.google.com/macros/s/AKfycbzjK5KS9SkeqWYU2Fv5m5COyMBAX-bVQdEctvkhFLgVGTUPN4cXKogLuX2JDy_yAr4Fdw/exec";
+// // const URL = process.env.API_URL;
+// const URL =
+//   "https://script.google.com/macros/s/AKfycbyDLdMPr9kyWXhhyvb4_uDRCwVgzLCS4ssvdir4Q2Na56rPoUQeZq2-pMTWSLA_gtyYnA/exec";
+// // "https://script.google.com/macros/s/AKfycbzjK5KS9SkeqWYU2Fv5m5COyMBAX-bVQdEctvkhFLgVGTUPN4cXKogLuX2JDy_yAr4Fdw/exec";
 
 function index() {
   const [btnText, setBtnText] = useState("Submit");
@@ -15,6 +16,7 @@ function index() {
   const [Flag1, setFlag1] = useState(false);
   const [Flag2, setFlag2] = useState(false);
   const [contact, setContact] = useState("");
+  const [SelectedLocation, setSelectedLocation] = useState("");
 
   const handleContactChange = (e) => {
     const inputValue = e.target.value;
@@ -27,6 +29,34 @@ function index() {
     e.preventDefault();
     setBtnText("Please wait...");
     setBtnDisabled(true);
+
+    switch (SelectedLocation) {
+      case "EDC_PU":
+        var encodedSheetName = encodeURIComponent("EDC Parul University");
+        break;
+      case "Vadodara_SU":
+        var encodedSheetName = encodeURIComponent("Vadodara Startup Studio");
+        break;
+
+      case "Surat_SU":
+        var encodedSheetName = encodeURIComponent("Surat Startup Studio");
+
+        break;
+      case "Rajkot_SU":
+        var encodedSheetName = encodeURIComponent("Rajkot Startup Studio");
+
+        break;
+      case "Ahemdabad_SU":
+        var encodedSheetName = encodeURIComponent("Ahemdabad Startup Studio");
+        break;
+
+      default:
+        break;
+    }
+
+    var URL =
+      "https://script.google.com/macros/s/AKfycbzR127VfrEgEOTXw3A8hI8erdPOC6qdAihwtSusAfKZzzSVBJnQbyxrU7uxMNSmTtSfGg/exec?sheet=" +
+      encodedSheetName;
 
     try {
       const response = await fetch(URL, {
@@ -119,7 +149,10 @@ function index() {
           <div className="flex flex-col space-y-1 ml-4 mt-1">
             <label className="md:text-lg uppercase text-white bg-red-600 text-base px-6 md:px-8 py-1 md:py-2 rounded-md hover:shadow-lg shadow-md shadow-red-400 hover:shadow-red-400 border-red-600  border-[1px]  duration-500 cursor-pointer">
               <input
-                onChange={() => setFlag2(true)}
+                onChange={() => {
+                  setSelectedLocation("EDC_PU");
+                  setFlag2(true);
+                }}
                 name="Apply_at"
                 type="radio"
                 value="edc_parul_university"
@@ -129,7 +162,10 @@ function index() {
             </label>
             <label className="md:text-lg uppercase text-white bg-red-600 text-base px-6 md:px-8 py-1 md:py-2 rounded-md hover:shadow-lg shadow-md shadow-red-400 hover:shadow-red-400 border-red-600  border-[1px]  duration-500 cursor-pointer">
               <input
-                onChange={() => setFlag2(true)}
+                onChange={() => {
+                  setSelectedLocation("Vadodara_SU");
+                  setFlag2(true);
+                }}
                 name="Apply_at"
                 type="radio"
                 value="vadodara_startup_studio"
@@ -139,7 +175,10 @@ function index() {
             </label>
             <label className="md:text-lg uppercase text-white bg-red-600 text-base px-6 md:px-8 py-1 md:py-2 rounded-md hover:shadow-lg shadow-md shadow-red-400 hover:shadow-red-400 border-red-600  border-[1px]  duration-500 cursor-pointer">
               <input
-                onChange={() => setFlag2(true)}
+                onChange={() => {
+                  setSelectedLocation("Surat_SU");
+                  setFlag2(true);
+                }}
                 name="Apply_at"
                 type="radio"
                 value="surat_startup_studio"
@@ -149,7 +188,10 @@ function index() {
             </label>
             <label className="md:text-lg uppercase text-white bg-red-600 text-base px-6 md:px-8 py-1 md:py-2 rounded-md hover:shadow-lg shadow-md shadow-red-400 hover:shadow-red-400 border-red-600  border-[1px]  duration-500 cursor-pointer">
               <input
-                onChange={() => setFlag2(true)}
+                onChange={() => {
+                  setSelectedLocation("Rajkot_SU");
+                  setFlag2(true);
+                }}
                 name="Apply_at"
                 type="radio"
                 value="rajkot_startup_studio"
@@ -159,7 +201,10 @@ function index() {
             </label>
             <label className="md:text-lg uppercase text-white bg-red-600 text-base px-6 md:px-8 py-1 md:py-2 rounded-md hover:shadow-lg shadow-md shadow-red-400 hover:shadow-red-400 border-red-600  border-[1px]  duration-500 cursor-pointer">
               <input
-                onChange={() => setFlag2(true)}
+                onChange={() => {
+                  setSelectedLocation("Ahemdabad_SU");
+                  setFlag2(true);
+                }}
                 name="Apply_at"
                 type="radio"
                 value="ahemdabad_startup_studio"
